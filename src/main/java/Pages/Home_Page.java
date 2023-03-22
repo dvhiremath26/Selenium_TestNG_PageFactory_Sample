@@ -9,6 +9,17 @@ public class Home_Page {
 	
 	public WebDriver driver;
 	
+	
+	@FindBy(xpath = "//a[normalize-space()='Simple Form Demo']")
+	private WebElement simpleFormDemo;
+	
+	@FindBy(xpath = "//a[normalize-space()='Drag & Drop Sliders']")
+	private WebElement dragAndDroplink;
+	
+	
+	/////////////////////////////////////////////////////////////////////
+	
+		
 	public Home_Page(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
@@ -16,15 +27,12 @@ public class Home_Page {
 	
 	
 	
-	@FindBy(xpath = "//a[normalize-space()='Simple Form Demo']")
-	private WebElement simpleFormDemo;
-
-	
-
-	
-	
 	public void clickOnSimpleFormDemo() {
 		simpleFormDemo.click();
+	}
+	
+	public void clickOnDragSlider() {
+		dragAndDroplink.click();
 	}
 	
 }
