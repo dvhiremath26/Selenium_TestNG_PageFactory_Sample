@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="1" total="2" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-26T17:07:25 IST" name="Default suite" finished-at="2023-03-26T17:07:39 IST" duration-ms="14069">
+  <suite started-at="2023-03-26T19:27:01 IST" name="Default suite" finished-at="2023-03-26T19:27:10 IST" duration-ms="9198">
     <groups>
     </groups>
-    <test started-at="2023-03-26T17:07:25 IST" name="Default test" finished-at="2023-03-26T17:07:39 IST" duration-ms="14069">
+    <test started-at="2023-03-26T19:27:01 IST" name="Default test" finished-at="2023-03-26T19:27:10 IST" duration-ms="9198">
       <class name="Test.scenario_03_Test">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:25 IST" name="initDriver" finished-at="2023-03-26T17:07:29 IST" duration-ms="3618" status="PASS">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_03_Test@647e447]" started-at="2023-03-26T19:27:01 IST" name="initDriver" finished-at="2023-03-26T19:27:05 IST" duration-ms="3540" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="validate_Error_Message()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:29 IST" name="validate_Error_Message" finished-at="2023-03-26T17:07:31 IST" duration-ms="2967" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validate_Error_Message -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:32 IST" name="closeDriver" finished-at="2023-03-26T17:07:32 IST" duration-ms="358" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:32 IST" name="initDriver" finished-at="2023-03-26T17:07:34 IST" duration-ms="2110" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initDriver -->
-        <test-method signature="validate_Success_Message()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:34 IST" name="validate_Success_Message" finished-at="2023-03-26T17:07:39 IST" duration-ms="4705" status="PASS">
+        <test-method signature="validate_Success_Message()[pri:0, instance:Test.scenario_03_Test@647e447]" started-at="2023-03-26T19:27:05 IST" name="validate_Success_Message" finished-at="2023-03-26T19:27:10 IST" duration-ms="5290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validate_Success_Message -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_03_Test@3d74bf60]" started-at="2023-03-26T17:07:39 IST" name="closeDriver" finished-at="2023-03-26T17:07:39 IST" duration-ms="246" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_03_Test@647e447]" started-at="2023-03-26T19:27:10 IST" name="closeDriver" finished-at="2023-03-26T19:27:10 IST" duration-ms="325" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

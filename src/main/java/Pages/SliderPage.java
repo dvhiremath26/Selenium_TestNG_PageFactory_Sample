@@ -31,13 +31,9 @@ public class SliderPage {
 	
 	///////////////////////////////////////////////////////////////////////////
 		
-	public String DragValue15() {
-		elementUtils.dragAndDropByAxis(value15, 118, 0);
+	public String DragValue15(String Xaxis, String Yaxis) {
+		elementUtils.dragAndDropByAxis(value15, Integer.parseInt(Xaxis), Integer.parseInt(Yaxis));
 		return elementUtils.getTextFromElement(draggedValue);
-//		Actions action = new Actions(driver);
-//		action.moveToElement(value15);
-//		action.dragAndDropBy(value15, 118, 0).build().perform();
-//		return draggedValue.getText();
 	}
 
 }

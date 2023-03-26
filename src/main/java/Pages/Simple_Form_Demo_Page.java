@@ -34,8 +34,8 @@ public class Simple_Form_Demo_Page {
 	}
 
 
-	public void enterMessage() {
-		elementUtils.typeTextIntoElement(textBox, "Welcome to LambdaTest");
+	public void enterMessage(String text) {
+		elementUtils.typeTextIntoElement(textBox, text);
 	}
 
 	public void clickOnButton() {

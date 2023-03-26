@@ -1,5 +1,7 @@
 package Base;
 
+import java.util.Properties;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +15,7 @@ public class baseTest {
 	
 	driverFactory df;
 	WebDriver driver;
+	public Properties prop;
 	
 	protected Home_Page homePage;
 	protected Simple_Form_Demo_Page simpleFormPage;
@@ -23,7 +26,8 @@ public class baseTest {
 	@BeforeMethod
 	public void initDriver() {
 		df = new driverFactory();
-		driver = df.driverSetUp();
+		prop = df.initProperties();
+		driver = df.driverSetUp(prop);
 		
 		homePage = new Home_Page(driver);
 		simpleFormPage = new Simple_Form_Demo_Page(driver);	   

@@ -63,57 +63,57 @@ public class InputFormPge {
 	//////////////////////////////////////////////////////////////////////////////////////
 	
 	
-	public void enterName() {
-		elementUtils.typeTextIntoElement(name, "nameText");
+	public void enterName(String nameText) {
+		elementUtils.typeTextIntoElement(name, nameText);
 	}
 	
 	
-	public void enterEmail() {
-		elementUtils.typeTextIntoElement(email, "email@test.com");
+	public void enterEmail(String emailID) {
+		elementUtils.typeTextIntoElement(email, emailID);
 	}
 	
 	
-	public void enterPassword() {
-		elementUtils.typeTextIntoElement(password, "Test@123");
+	public void enterPassword(String pwd) {
+		elementUtils.typeTextIntoElement(password, pwd);
 	}
 	
-	public void enterCompany() {
-		elementUtils.typeTextIntoElement(company, "Testing");
-	}
-	
-	
-	public void enterWebsite() {
-		elementUtils.typeTextIntoElement(website, "www.testing.com");
+	public void enterCompany(String comp) {
+		elementUtils.typeTextIntoElement(company, comp);
 	}
 	
 	
-	public void selectCountry() {
-		elementUtils.selectFromDropDown(country, "India");
+	public void enterWebsite(String web) {
+		elementUtils.typeTextIntoElement(website, web);
 	}
 	
 	
-	public void enterCity() {
-		elementUtils.typeTextIntoElement(city, "Bengaluru");
+	public void selectCountry(String countries) {
+		elementUtils.selectFromDropDown(country, countries);
 	}
 	
 	
-	public void enterAddress1() {
-		elementUtils.typeTextIntoElement(address1, "Bengaluru 01");
+	public void enterCity(String cityName) {
+		elementUtils.typeTextIntoElement(city, cityName);
 	}
 	
 	
-	public void enterAddress2() {
-		elementUtils.typeTextIntoElement(address2, "Bengaluru 02");
+	public void enterAddress1(String Add1) {
+		elementUtils.typeTextIntoElement(address1, Add1);
 	}
 	
 	
-	public void enterState() {
-		elementUtils.typeTextIntoElement(state, "Karnataka");
+	public void enterAddress2(String Add2) {
+		elementUtils.typeTextIntoElement(address2, Add2);
 	}
 	
 	
-	public void enterZipcode() {
-		elementUtils.typeTextIntoElement(zip, "560060");
+	public void enterState(String stateName) {
+		elementUtils.typeTextIntoElement(state, stateName);
+	}
+	
+	
+	public void enterZipcode(String zipcode) {
+		elementUtils.typeTextIntoElement(zip, zipcode);
 	}
 	
 	

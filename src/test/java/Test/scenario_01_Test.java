@@ -14,7 +14,7 @@ public class scenario_01_Test extends baseTest{
 		
 		homePage.clickOnSimpleFormDemo();
 		String actualURL = simpleFormPage.getURL();
-		Assert.assertTrue(actualURL.contains("simple-form-demo"));
+		Assert.assertTrue(actualURL.contains(prop.getProperty("SimpleFormURL")));
 
 	}
 	
@@ -22,10 +22,10 @@ public class scenario_01_Test extends baseTest{
 	@Test
 	public void validate_Entered_Message() {	
 		homePage.clickOnSimpleFormDemo();
-		simpleFormPage.enterMessage();
+		simpleFormPage.enterMessage(prop.getProperty("MessageToBeEntered"));
 		simpleFormPage.clickOnButton();
 		String actualEnteredMsg = simpleFormPage.validateTheEnteredMessage();
-		Assert.assertEquals(actualEnteredMsg, "Elcome to LambdaTest");
+		Assert.assertEquals(actualEnteredMsg, prop.getProperty("MessageToBeEntered"));
 	}
 
 
