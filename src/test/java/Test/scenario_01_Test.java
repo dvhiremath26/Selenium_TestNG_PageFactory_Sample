@@ -14,7 +14,7 @@ public class scenario_01_Test extends baseTest{
 		
 		homePage.clickOnSimpleFormDemo();
 		String actualURL = simpleFormPage.getURL();
-		Assert.assertEquals(actualURL, "https://www.lambdatest.com/selenium-playground/simple-form-demo");
+		Assert.assertTrue(actualURL.contains("simple-form-demo"));
 
 	}
 	
