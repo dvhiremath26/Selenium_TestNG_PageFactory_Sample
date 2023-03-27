@@ -40,11 +40,13 @@ public class ExtentReportListeners extends driverFactory implements ITestListene
 		extentReports = new ExtentReports();
 		ExtentSparkReporter reporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
 		reporter.config().setReportName("LambdaTest Automation Test Results");
+		
 		extentReports.attachReporter(reporter);
 		extentReports.setSystemInfo("Author", "Deepak");
 		//extentReports.setSystemInfo("Build#", "1.1");
 		//extentReports.setSystemInfo("Team", "LTIM QA Team");
 		extentReports.setSystemInfo("Customer Name", "P&G");
+		
 		return extentReports;
 	}
 
@@ -82,8 +84,8 @@ public class ExtentReportListeners extends driverFactory implements ITestListene
 		String methodName = result.getMethod().getMethodName();
 		String imagePath = getScreenshotFile(methodName);
 		test.fail( methodName + result.getThrowable() + " Test Failed!");
-		//test.addScreenCaptureFromBase64String(imagePath);
-		test.addScreenCaptureFromPath(imagePath);
+		test.addScreenCaptureFromBase64String(imagePath);
+		//test.addScreenCaptureFromPath(imagePath);
 //		test.log(Status.FAIL, MediaEntityBuilder.createScreenCaptureFromPath(imagePath).build());
 		
 		//test.fail(MediaEntityBuilder.createScreenCaptureFromPath(imagePath).build());

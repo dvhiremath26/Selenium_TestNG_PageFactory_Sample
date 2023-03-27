@@ -60,6 +60,7 @@ public class driverFactory {
 	
 	
 	public String getScreenshotFile(String imageName) {
+		
 		TakesScreenshot ts = ((TakesScreenshot)driver);
 		File srcFile = ts.getScreenshotAs(OutputType.FILE);
 		String destFile = "./screenshots/" + imageName + ".png";
@@ -67,11 +68,23 @@ public class driverFactory {
 			FileUtils.copyFile(srcFile, new File(destFile));
 		} catch (IOException e) {
 			e.printStackTrace();
-		}		
-		return destFile;
+		}	
+				
+		File screenshotFile = new File(destFile);
+		byte[] bytes = null;
+		try {
+			bytes = FileUtils.readFileToByteArray(screenshotFile);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		String base64Encoded = Base64.getEncoder().encodeToString(bytes);
+
+		
+		return base64Encoded;
 	}
 	
-	public String getScreenshotBase64(String imageName) {
+	/*public String getScreenshotBase64(String imageName) {
 		TakesScreenshot ts = ((TakesScreenshot)driver);
 		String srcFile = ts.getScreenshotAs(OutputType.BASE64);
 		String destFile = "./screenshots/" + imageName + ".jpg";
@@ -81,7 +94,7 @@ public class driverFactory {
 			e.printStackTrace();
 		}		
 		return destFile;
-	}
+	}*/
 	
 	
 	

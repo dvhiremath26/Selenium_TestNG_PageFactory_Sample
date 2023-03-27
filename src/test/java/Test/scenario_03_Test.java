@@ -36,8 +36,7 @@ public class scenario_03_Test extends baseTest{
 		inputForm.enterZipcode(constData.zipcode);
 		inputForm.clickOnSubmitButton();
 		String actualMsg = inputForm.getSuccessMessage();
-		Assert.assertTrue(actualMsg.contains(prop.getProperty("SuccessMessage")));
-		System.out.println(constData.website);
+		Assert.assertTrue(actualMsg.contains(prop.getProperty("SuccessMessage")));	
 	}
 
 }
