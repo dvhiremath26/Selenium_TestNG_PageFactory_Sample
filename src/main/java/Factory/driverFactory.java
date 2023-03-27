@@ -2,16 +2,30 @@ package Factory;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Base64;
 import java.util.Properties;
+import org.apache.commons.io.FileUtils;
+import org.apache.commons.io.IOUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import com.aventstack.extentreports.reporter.configuration.util.IOUtil;
+
 
 public class driverFactory {
 
-	private WebDriver driver;
+	protected static WebDriver driver;
 	Properties prop;
+	
+	public static WebDriver getBrowserInstance()
+	{
+		return driver;	
+	}
 
 
 	public WebDriver driverSetUp(Properties prop) {
@@ -42,9 +56,34 @@ public class driverFactory {
 		return prop;
 
 	}
-
-
-
-
+	
+	
+	
+	public String getScreenshotFile(String imageName) {
+		TakesScreenshot ts = ((TakesScreenshot)driver);
+		File srcFile = ts.getScreenshotAs(OutputType.FILE);
+		String destFile = "./screenshots/" + imageName + ".png";
+		try {
+			FileUtils.copyFile(srcFile, new File(destFile));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+		return destFile;
+	}
+	
+	public String getScreenshotBase64(String imageName) {
+		TakesScreenshot ts = ((TakesScreenshot)driver);
+		String srcFile = ts.getScreenshotAs(OutputType.BASE64);
+		String destFile = "./screenshots/" + imageName + ".jpg";
+		try {
+			FileUtils.copyFile(new File(srcFile), new File(destFile));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}		
+		return destFile;
+	}
+	
+	
+	
 }
 

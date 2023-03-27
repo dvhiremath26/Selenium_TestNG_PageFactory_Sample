@@ -1,10 +1,17 @@
 package Base;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Properties;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
+import com.google.common.io.Files;
+
 import Factory.driverFactory;
 import Pages.Home_Page;
 import Pages.InputFormPge;
@@ -14,7 +21,7 @@ import Pages.SliderPage;
 public class baseTest {
 	
 	driverFactory df;
-	WebDriver driver;
+	protected WebDriver driver;
 	public Properties prop;
 	
 	protected Home_Page homePage;
@@ -40,5 +47,5 @@ public class baseTest {
 	public void closeDriver() {
 		driver.quit();
 	}
-
+	
 }

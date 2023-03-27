@@ -6,7 +6,7 @@
       <class name="Test.scenario_03_Test">
         <methods>
           <include name="closeDriver"/>
-          <include name="validate_Success_Message"/>
+          <include name="validate_Error_Message"/>
           <include name="initDriver"/>
         </methods>
       </class> <!-- Test.scenario_03_Test -->
