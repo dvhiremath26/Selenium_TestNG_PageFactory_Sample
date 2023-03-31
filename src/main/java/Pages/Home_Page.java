@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import Utils.ElementUtils;
+import io.qameta.allure.Step;
 
 public class Home_Page {
 	
@@ -20,6 +21,7 @@ public class Home_Page {
 	}
 	
 	
+	
 	@FindBy(xpath = "//a[normalize-space()='Simple Form Demo']")
 	private WebElement simpleFormDemo;
 	
@@ -32,15 +34,17 @@ public class Home_Page {
 	
 	/////////////////////////////////////////////////////////////////////
 	
-	
+	@Step("Clicking on the Simple Form Demo link")
 	public void clickOnSimpleFormDemo() {
 		elementUtils.clickOnElement(simpleFormDemo);
 	}
 	
+	@Step("Clicking on the Drag And Drop link")
 	public void clickOnDragSlider() {
 		elementUtils.clickOnElement(dragAndDroplink);
 	}
 	
+	@Step("Clicking on the Input Form Submit link")
 	public void clickOnInputFormSubmit() {
 		elementUtils.clickOnElement(inputFormSubmit);
 	}

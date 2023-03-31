@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Utils.ElementUtils;
+import io.qameta.allure.Step;
 
 public class Simple_Form_Demo_Page {
 
@@ -29,19 +30,22 @@ public class Simple_Form_Demo_Page {
 	
 	///////////////////////////////////////////////////////////////////
 	
+	@Step("Getting Simple Form Demo page URL")
 	public String getURL() {
 		return driver.getCurrentUrl();		
 	}
 
-
+	@Step("Entering message: {0} into the Enter Message field")
 	public void enterMessage(String text) {
 		elementUtils.typeTextIntoElement(textBox, text);
 	}
 
+	@Step("Clicking on the Get Checked Value button")
 	public void clickOnButton() {
 		elementUtils.clickOnElement(getCheckedValueButton);
 	}
-
+	
+	@Step("verifying the entered message is displayed under Your Message section.")
 	public String validateTheEnteredMessage() {
 		return elementUtils.getTextFromElement(displayedMessage);	
 	}

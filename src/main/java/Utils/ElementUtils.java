@@ -63,6 +63,7 @@ public class ElementUtils {
 
 	public String getTextFromElement(WebElement element) {
 		WebElement webElement = waitForElement(element);
+		mouseHover(element);
 		return webElement.getText();
 	}
 

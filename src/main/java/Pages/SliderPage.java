@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import Utils.ElementUtils;
+import io.qameta.allure.Step;
 
 
 public class SliderPage {
@@ -30,7 +31,8 @@ public class SliderPage {
 	private WebElement draggedValue;
 	
 	///////////////////////////////////////////////////////////////////////////
-		
+	
+	@Step("Verifying the slider is dragged to get the value 95.")
 	public String DragValue15(String Xaxis, String Yaxis) {
 		elementUtils.dragAndDropByAxis(value15, Integer.parseInt(Xaxis), Integer.parseInt(Yaxis));
 		return elementUtils.getTextFromElement(draggedValue);

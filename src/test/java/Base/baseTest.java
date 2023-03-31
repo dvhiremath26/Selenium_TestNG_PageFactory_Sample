@@ -1,22 +1,16 @@
 package Base;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.Properties;
-
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-
-import com.google.common.io.Files;
-
 import Factory.driverFactory;
 import Pages.Home_Page;
 import Pages.InputFormPge;
 import Pages.Simple_Form_Demo_Page;
 import Pages.SliderPage;
+import io.qameta.allure.Step;
+
 
 public class baseTest {
 	
@@ -30,6 +24,7 @@ public class baseTest {
 	protected InputFormPge inputForm;
 	
 	
+	@Step("Start the application")
 	@BeforeMethod
 	public void initDriver() {
 		df = new driverFactory();
