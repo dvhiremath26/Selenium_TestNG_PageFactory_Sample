@@ -1,25 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="3" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-03-22T22:00:31 IST" name="Default suite" finished-at="2023-03-22T22:00:43 IST" duration-ms="12109">
+  <suite started-at="2023-03-29T21:30:36 IST" name="Suite" finished-at="2023-03-29T21:31:04 IST" duration-ms="27544">
     <groups>
     </groups>
-    <test started-at="2023-03-22T22:00:31 IST" name="Default test" finished-at="2023-03-22T22:00:43 IST" duration-ms="12109">
-      <class name="Test.scenario_02_Test">
-        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_02_Test@39529185]" started-at="2023-03-22T22:00:31 IST" name="initDriver" finished-at="2023-03-22T22:00:40 IST" duration-ms="8784" status="PASS">
+    <test started-at="2023-03-29T21:30:36 IST" name="Test" finished-at="2023-03-29T21:31:04 IST" duration-ms="27544">
+      <class name="Test.scenario_01_Test">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:36 IST" name="initDriver" finished-at="2023-03-29T21:30:42 IST" duration-ms="6047" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initDriver -->
-        <test-method signature="validate_Dragged_Value()[pri:0, instance:Test.scenario_02_Test@39529185]" started-at="2023-03-22T22:00:40 IST" name="validate_Dragged_Value" finished-at="2023-03-22T22:00:43 IST" duration-ms="2980" status="PASS">
+        <test-method signature="validate_Simple_Form_Demo_URL()[pri:1, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:42 IST" name="validate_Simple_Form_Demo_URL" description="Verifying the Simple Form Demo page URL contains &#039;simple-form-demo&#039;" finished-at="2023-03-29T21:30:44 IST" duration-ms="1151" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at Test.scenario_01_Test.validate_Simple_Form_Demo_URL(scenario_01_Test.java:22)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Simple_Form_Demo_URL -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:44 IST" name="closeDriver" finished-at="2023-03-29T21:30:44 IST" duration-ms="138" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:44 IST" name="initDriver" finished-at="2023-03-29T21:30:46 IST" duration-ms="1820" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="validate_Entered_Message()[pri:2, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:46 IST" name="validate_Entered_Message" description="Verifying the entered message in the simple form text box is displyed under Your message section" finished-at="2023-03-29T21:30:50 IST" duration-ms="3801" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Entered_Message -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_01_Test@656f62dc]" started-at="2023-03-29T21:30:50 IST" name="closeDriver" finished-at="2023-03-29T21:30:50 IST" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Test.scenario_01_Test -->
+      <class name="Test.scenario_03_Test">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:30:50 IST" name="initDriver" finished-at="2023-03-29T21:30:52 IST" duration-ms="1902" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="validate_Error_Message()[pri:4, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:30:52 IST" name="validate_Error_Message" description="Verifying the Input Form error message while submitting empty form." finished-at="2023-03-29T21:30:53 IST" duration-ms="931" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Error_Message -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:30:53 IST" name="closeDriver" finished-at="2023-03-29T21:30:53 IST" duration-ms="122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:30:53 IST" name="initDriver" finished-at="2023-03-29T21:30:55 IST" duration-ms="1682" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="validate_Success_Message()[pri:5, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:30:55 IST" name="validate_Success_Message" description="Verifying the success message after submitting the Input Form." finished-at="2023-03-29T21:31:00 IST" duration-ms="5545" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validate_Success_Message -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_03_Test@cb39552]" started-at="2023-03-29T21:31:00 IST" name="closeDriver" finished-at="2023-03-29T21:31:00 IST" duration-ms="93" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- Test.scenario_03_Test -->
+      <class name="Test.scenario_02_Test">
+        <test-method is-config="true" signature="initDriver()[pri:0, instance:Test.scenario_02_Test@1f3b992]" started-at="2023-03-29T21:31:00 IST" name="initDriver" finished-at="2023-03-29T21:31:02 IST" duration-ms="1688" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initDriver -->
+        <test-method signature="validate_Dragged_Value()[pri:3, instance:Test.scenario_02_Test@1f3b992]" started-at="2023-03-29T21:31:02 IST" name="validate_Dragged_Value" description="Verifying the slider is dragged to get the value 95" finished-at="2023-03-29T21:31:03 IST" duration-ms="1151" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [95] but found [89]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [95] but found [89]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at Test.scenario_02_Test.validate_Dragged_Value(scenario_02_Test.java:23)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validate_Dragged_Value -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_02_Test@39529185]" started-at="2023-03-22T22:00:43 IST" name="closeDriver" finished-at="2023-03-22T22:00:43 IST" duration-ms="293" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:Test.scenario_02_Test@1f3b992]" started-at="2023-03-29T21:31:03 IST" name="closeDriver" finished-at="2023-03-29T21:31:04 IST" duration-ms="109" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- Test.scenario_02_Test -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

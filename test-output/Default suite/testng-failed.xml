@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Test.scenario_02_Test">
+      <class name="Test.scenario_01_Test">
         <methods>
+          <include name="validate_Simple_Form_Demo_URL"/>
           <include name="closeDriver"/>
-          <include name="validate_Dragged_Value"/>
           <include name="initDriver"/>
         </methods>
-      </class> <!-- Test.scenario_02_Test -->
+      </class> <!-- Test.scenario_01_Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
