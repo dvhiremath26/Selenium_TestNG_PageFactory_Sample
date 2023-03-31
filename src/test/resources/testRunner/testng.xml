@@ -3,8 +3,8 @@
 <suite name="Suite">
 
 <listeners>
-<listener class-name="Resources.TestAllureReportListeners"></listener>
-<listener class-name="Resources.ExtentReportListeners"></listener>
+<listener class-name="Listeners.TestAllureReportListeners"></listener>
+<listener class-name="Listeners.ExtentReportListeners"></listener>
 </listeners>
 
   <test thread-count="5" name="Test">
