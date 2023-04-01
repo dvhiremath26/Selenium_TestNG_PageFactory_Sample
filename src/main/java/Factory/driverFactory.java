@@ -10,13 +10,15 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 
 public class driverFactory {
 
-	public static WebDriver driver;
-	Properties prop;
+	public WebDriver driver;
+	public Properties prop;
+	public OptionsManager optionsManager;
 
 	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
 
@@ -28,22 +30,34 @@ public class driverFactory {
 
 	// Initialize the browser and open the base URL
 	public WebDriver driverSetUp(Properties prop) {
-		ChromeOptions opt = new ChromeOptions();
-		//opt.addArguments("--remote-allow-origins=*");
-		opt.addArguments("-incognito");
-		opt.addArguments("disable-popup-blocking");
-		opt.addArguments("--start-maximized");
-		opt.addArguments("--headless");
-		opt.addArguments("window-size=1280,720");
 
-		// driver = new ChromeDriver(opt);
-		tlDriver.set(new ChromeDriver(opt));
-		// getDriver().manage().window().maximize();
+		String browsername = prop.getProperty("browser").toLowerCase();
+		System.out.println("Browser name is " + browsername);
+
+		optionsManager = new OptionsManager(prop);
+
+		if(browsername.equals("chrome")){
+			tlDriver.set(new ChromeDriver(optionsManager.getChromeOptions()));
+		}
+
+		else if(browsername.equals("edge")){
+			tlDriver.set(new EdgeDriver(optionsManager.getEdgeOptions()));
+		}
+
+		else if(browsername.equals("firefox")){
+			tlDriver.set(new FirefoxDriver(optionsManager.getFirefoxOptions()));
+		}
+
+		else {
+			System.out.println("Please pass the right browser name as chrome, edge, and firefox in the config properties file.");
+		}
 		getDriver().manage().deleteAllCookies();
+		getDriver().manage().window().maximize();
 		getDriver().get(prop.getProperty("url"));
 
 		return getDriver();
 	}
+
 
 
 	// Initializing the properties file to read the data from the object prop
@@ -59,6 +73,7 @@ public class driverFactory {
 		}
 		return prop;
 	}
+
 
 
 	// Taking screenshot and converting into base64 output type
