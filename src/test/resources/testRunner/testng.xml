@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-
-<listeners>
-<listener class-name="Listeners.TestAllureReportListeners"></listener>
-<listener class-name="Listeners.ExtentReportListeners"></listener>
-</listeners>
-
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="Test.scenario_01_Test"/>
-      <class name="Test.scenario_03_Test"/>
-      <class name="Test.scenario_02_Test"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<suite name="AutomationSuite">
+  <suite-files>
+    <suite-file path="src/test/resources/testRunner/RegressionTest.xml"></suite-file>
+    <suite-file path="src/test/resources/testRunner/CrossbrowserTest.xml"></suite-file>
+  </suite-files>
+</suite> <!--
+Suite -->
