@@ -13,13 +13,15 @@ import io.qameta.allure.SeverityLevel;
 @Listeners({TestAllureReportListeners.class})
 public class scenario_01_Test extends baseTest{
 
+
 	@Test(priority=1, description="Verifying the Simple Form Demo page URL contains 'simple-form-demo'")
 	@Severity(SeverityLevel.CRITICAL)
 	@Description("Verifying the Simple Form Demo page URL contains 'simple-form-demo'")
 	public void validate_Simple_Form_Demo_URL() {		
 		homePage.clickOnSimpleFormDemo();
 		String actualURL = simpleFormPage.getURL();
-		Assert.assertTrue(actualURL.contains(prop.getProperty("SimpleFormURL")));
+		System.out.println("Simple Form Page URL is: " +actualURL);
+		Assert.assertTrue(actualURL.contains("simple-form-demo"));
 
 	}
 	

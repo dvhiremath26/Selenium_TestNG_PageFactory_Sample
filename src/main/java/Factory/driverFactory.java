@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.testng.annotations.Parameters;  
 
 public class driverFactory {
 
@@ -28,6 +28,7 @@ public class driverFactory {
 		return tlDriver.get();
 	}
 
+	
 	// Initialize the browser and open the base URL
 	public WebDriver driverSetUp(Properties prop) {
 
